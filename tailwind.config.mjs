@@ -5,13 +5,43 @@ export default {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+
+  daisyui: {
+    themes: ["light", "dark", "cupcake"],
+  },
+
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+
+      fontSize: {
+        'xxs': '0.65rem',  // Menambahkan ukuran font ekstra kecil
+        'multixl': '10rem',  // Menambahkan ukuran font ekstra besar
+        'huge': '4rem',    // Menambahkan ukuran font sangat besar
       },
+
+      fontFamily: {
+        'Arial' : ['Arial'], 
+        'Delicious' : ['Delicious'], 
+        'Outfit' : ['Outfit'], 
+        'Poppins' : ['Poppins'], 
+      },
+      colors: {
+        
+        'primary': '#0206FB', 
+        'secondary': '#A7D918', 
+        'accent': '#FFD058', 
+        'custom-grey': '#D266A1', 
+        'custom-bg-primary' : '#9A47C0',
+        'custom-slate' : '#FFF5E0',
+      },
+      backgroundImage: {
+        'hero': "url('/assets/background/hero-bg.png')",
+        'contour-patern' : "url('/assets/background/contour-patern.png')",
+      }
+      
     },
   },
-  plugins: [],
+  plugins: [
+    require('daisyui'),
+  ],
 };
