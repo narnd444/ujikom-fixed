@@ -1,6 +1,6 @@
 const BenefitSection =()=>{
     return(
-       <section className="h-screen w-full flex flex-col space-y-5 bg-custom-slate">
+       <section className="h-screen w-full flex flex-col space-y-5 bg-custom-slate" id="benefit">
         <div className="flex w-full h-max p-5 pl-10 justify-between items-center space-x-5 font-Poppins font-semibold">
              <h1 className="text-3xl text-black w-80">
                 <span className="px-1 bg-secondary">Benefit</span> yang kami berikan untuk anda
