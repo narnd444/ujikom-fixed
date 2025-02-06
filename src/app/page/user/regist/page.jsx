@@ -9,7 +9,7 @@ const RegistPage = () => {
         <div className='w-4/12 flex flex-col space-y-4  shadow-slate-800/30 shadow-md border-slate-100/50 border rounded-3xl'>
            <div className='p-10'>
             <h1 className='text-black text-4xl w-32 font-medium'>Daftar Sekarang!</h1>
-            <img src="/assets/vector/regist-ilustrat.svg" alt="" className='w-80'/>
+            <img src="/assets/vector/login.png" alt="" className='w-96 object-cover h-80'/>
             <div className='flex flex-col w-full justify-start items-center'>
               <h1 className='3xl text-black'>atau</h1>
               <h1 className='3xl text-black '>sudah punya akun?</h1>
