@@ -33,6 +33,7 @@ export default {
         'custom-grey': '#D266A1', 
         'custom-bg-primary' : '#9A47C0',
         'custom-slate' : '#FFF5E0',
+        'custom-slate' : '#000050',
       },
       backgroundImage: {
         'hero': "url('/assets/background/hero-bg.png')",
