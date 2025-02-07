@@ -23,7 +23,7 @@ const Sidebar = () => {
           <Link href="/page/user/video" className='flex font-Outfit items-center text-black text-lg'>
             <FaVideo className='mx-3'/> {isExpanded && 'Video'}
           </Link>
-          <Link href="" className='flex font-Outfit items-center text-black text-lg'>
+          <Link href="/page/user/game" className='flex font-Outfit items-center text-black text-lg'>
             <FaGamepad className='mx-3'/> {isExpanded && 'Game'}
           </Link>
           <Link href="" className='flex font-Outfit items-center text-black text-lg'>
