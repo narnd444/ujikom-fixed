@@ -1,7 +1,7 @@
 import { FaArrowRight } from "react-icons/fa";
 const heroSection =()=>{
     return(
-        <section className="h-max w-full flex flex-col  p-10 bg-custom-slate">
+        <section className="h-screen w-full flex flex-col  p-10 bg-custom-slate" id="home">
             <div className="relative h-full w-full flex flex-col justify-center items-center font-Arial mt-28">
                 <img src="/assets/vector/arrow1.svg" className="absolute h-32 top-0 right-44"></img>
                 <img src="/assets/vector/arrow2.svg" className="absolute h-32 top-20 left-40"></img>
@@ -18,7 +18,7 @@ const heroSection =()=>{
                 </h1>
                 </div>
                 <div className="pharagraf font-Outfit max-w-[470px] text-center">
-                    <p className="text-sm text-black">E-Lins merupakan website e-learnning yang diperunutkan untuk anak-anak usia dibawah 10 tahun.  Dalam website ini anda dapat memberikan materi pelajaran Matematika ataupun Bahasa inggris kepada anak anda.</p>
+                    <p className="text-sm text-black">K-Learns merupakan website e-learnning yang diperunutkan untuk anak-anak usia dibawah 10 tahun.  Dalam website ini anda dapat memberikan materi pelajaran Matematika ataupun Bahasa inggris kepada anak anda.</p>
                 </div>
                 <button className="flex bg-primary p-2 px-4 mt-5 rounded-full items-center shadow-md">Mulai Sekarang<FaArrowRight className="mt-1 p-2 ml-4 h-8 w-8 bg-white rounded-full text-black"/></button>
             </div>

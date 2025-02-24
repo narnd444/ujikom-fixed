@@ -1,6 +1,6 @@
 const FiturSection =()=>{
     return(
-        <section className="h-max w-full bg-custom-slate py-5">
+        <section className="h-max w-full bg-custom-slate" id="fitur">
             <div className="w-full h-max py-10 bg-blue-700 rounded-3xl space-y-12 flex flex-col justify-center">
                 <div className="flex relative w-full items-start h-max justify-center">
                     <h1 className="mt-8 text-5xl max-w-[600px] text-center">

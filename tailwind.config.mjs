@@ -16,7 +16,7 @@ export default {
       fontSize: {
         'xxs': '0.65rem',  // Menambahkan ukuran font ekstra kecil
         'multixl': '10rem',  // Menambahkan ukuran font ekstra besar
-        'huge': '4rem',    // Menambahkan ukuran font sangat besar
+        'huge': '4rem',    
       },
 
       fontFamily: {
@@ -36,7 +36,10 @@ export default {
        
       },
       backgroundImage: {
-        'hero': "url('/assets/background/hero-bg.png')",
+        'accent': "url('/assets/bg.png')",
+        'profile': "url('/assets/bgprofile.png')",
+        'payment': "url('/assets/bgp.png')",
+        'comunity': "url('/assets/bgcom.png')",
         'contour-patern' : "url('/assets/background/contour-patern.png')",
       }
       
