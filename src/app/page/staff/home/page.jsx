@@ -3,6 +3,7 @@ import Sidebar from '@/app/components/navigations/sidebar'
 import Navbar from '@/app/components/navigations/navbar'
 import CardOne from '@/app/components/ui/card/dashboardAdmin/cardOne'
 import TablePetugas from '@/app/components/tables/TablePetugas'
+
 const HomePageAdmin = () => {
   return (
     <section className="w-full min-h-screen flex bg-custom-slate">

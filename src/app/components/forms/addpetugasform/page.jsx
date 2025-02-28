@@ -2,7 +2,8 @@
 
 import React, { useState } from "react";
 import { db } from "@/app/lib/firebase"; // Pastikan path ini benar
-import { collection, addDoc } from "firebase/firestore";
+import { collection, doc, setDoc } from "firebase/firestore";
+import bcrypt from "bcryptjs";
 
 const ModalTambahPetugas = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,19 +27,23 @@ const ModalTambahPetugas = () => {
     setError("");
 
     try {
-      // Tambahkan data ke Firestore (koleksi "staff")
-      await addDoc(collection(db, "staff"), {
-        id: Date.now(), // ID unik dari timestamp
+      // Hash password sebelum disimpan
+      const hashedPassword = await bcrypt.hash(formData.password, 10);
+
+      // Buat dokumen baru dengan ID otomatis
+      const newDocRef = doc(collection(db, "staff"));
+      await setDoc(newDocRef, {
+        id: newDocRef.id,
         nama: formData.nama,
         username: formData.username,
-        password: formData.password,
+        password: hashedPassword, // Simpan password yang sudah di-hash
       });
 
-      alert("Petugas berhasil ditambahkan!");
+      alert("✅ Petugas berhasil ditambahkan!");
       setIsOpen(false); // Tutup modal
       setFormData({ nama: "", username: "", password: "" }); // Reset form
     } catch (err) {
-      console.error("Error adding document: ", err);
+      console.error("❌ Error adding document: ", err);
       setError("Gagal menambahkan petugas.");
     }
 

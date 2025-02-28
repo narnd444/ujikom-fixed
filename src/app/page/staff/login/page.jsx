@@ -4,8 +4,6 @@ import { IoIosArrowRoundBack } from "react-icons/io";
 import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { db } from "@/app/lib/firebase";
-import { collection, getDocs, query, where } from "firebase/firestore";
 
 const LoginPageStaff = () => {
   const [username, setUsername] = useState("");
@@ -20,29 +18,23 @@ const LoginPageStaff = () => {
     setSuccessMessage("");
 
     try {
-      const q = query(collection(db, "staff"), where("username", "==", username));
-      const querySnapshot = await getDocs(q);
+      const response = await fetch("/api/login/staff", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username, password }),
+      });
 
-      if (querySnapshot.empty) {
-        setError("❌ Username tidak ditemukan!");
+      const data = await response.json();
+
+      if (!response.ok) {
+        setError(`❌ ${data.error}`);
         return;
       }
 
-      const staffData = querySnapshot.docs[0].data();
-
-      if (staffData.password !== password) {
-        setError("❌ Password salah!");
-        return;
-      }
-
-      // Tampilkan pesan sukses
       setSuccessMessage("✅ Login berhasil! Anda akan dialihkan...");
-      
-      // Redirect setelah 2 detik
       setTimeout(() => {
         router.push("/page/staff/home");
       }, 2000);
-
     } catch (err) {
       console.error("Error saat login:", err);
       setError("❌ Terjadi kesalahan, coba lagi!");
@@ -99,12 +91,13 @@ const LoginPageStaff = () => {
             </div>
           </form>
         </div>
+        
         <div className="w-4/12 flex flex-col space-y-4 shadow-slate-800/30 shadow-md border-slate-100/50 border rounded-3xl">
           <div className="p-10">
             <h1 className="text-black text-4xl w-32 font-medium">Login Sekarang!</h1>
             <img src="/assets/vector/loginAdmin.png" alt="" className="w-full mt-10" />
             <div className="flex flex-col w-full justify-start items-center">
-              <h1 className="text-3xl mt-10 text-black max-w-sm">Ayo kelola aplikasinya! Login sebagai staff.</h1>
+              <h1 className="text-3xl mt-10 text-black max-w-sm">Ayo kelola aplikasinya! Login sebagai Admin</h1>
             </div>
           </div>
         </div>

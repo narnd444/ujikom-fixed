@@ -4,7 +4,7 @@ import Sidebar from '@/app/components/navigations/sidebar'
 import Link from 'next/link'
 import ModalTambahGame from '@/app/components/forms/addgame/addgame' 
 import TableGame from '@/app/components/tables/Game/TableGame'
-const TambahPetugasPage = () => {
+const TambahGamePage = () => {
   return (
     <section className="w-full min-h-screen flex bg-custom-slate">
         <div className="sticky top-0 h-screen flex-none">
@@ -12,7 +12,7 @@ const TambahPetugasPage = () => {
         </div>
 
         <div className="flex-1 flex flex-col w-full">
-        <Navbar pos="Admin"/>
+        <Navbar pos="Admin" role="admin"/>
         <main className="p-10 w-full text-slate-800 flex flex-col space-y-5">
             <ModalTambahGame/>
             <TableGame/>
@@ -22,4 +22,4 @@ const TambahPetugasPage = () => {
   )
 }
 
-export default TambahPetugasPage
+export default TambahGamePage

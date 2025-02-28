@@ -24,7 +24,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed w-full h-max p-4 px-10 flex justify-between items-center space-x-5 font-Outfit z-30 transition-all duration-300 ${
+      className={`fixed w-full h-max p-2 px-12 flex justify-between items-center space-x-5 font-Outfit z-30 transition-all duration-300 ${
         isScrolled ? "bg-white shadow-sm rounded-b-3xl" : "bg-transparent"
       }`}
     >

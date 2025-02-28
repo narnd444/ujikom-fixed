@@ -27,11 +27,15 @@ const Sidebar = ({ role }) => {
     { href: "/page/admin/kelolapengguna", icon: <FaUser />, label: "Kelola Pengguna" },
     { href: "/page/admin/addpetugas", icon: <FaNewspaper />, label: "Kelola Petugas" },
     { href: "/page/admin/kelolagame", icon: <FaGamepad />, label: "Kelola Game" },
+    { href: "/page/admin/kelolavideo", icon: <FaVideo />, label: "Kelola Video" },
   ];
 
   const staffMenu = [
-    { href: "/page/staff/home", icon: <FaHome />, label: "Dashboard Staff" },
-    { href: "/page/staff/tasks", icon: <FaNewspaper />, label: "Tugas Staff" },
+    { href: "/page/staff/home", icon: <FaHome />, label: "Dashboard " },
+    { href: "/page/staff/tasks", icon: <FaRegComment />, label: "Comunity" },
+    { href: "/page/staff/kelolavideo", icon: <FaVideo />, label: "Kelola Video" },
+    { href: "/page/staff/kelolazoom", icon: <BiLogoZoom />, label: "Kelola Zoom" },
+    { href: "/page/staff/kelolaberita", icon: <FaNewspaper />, label: "Kelola Berita" },
   ];
 
   // Tentukan menu berdasarkan role

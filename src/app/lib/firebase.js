@@ -20,4 +20,12 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 const storage = getStorage(app);
 
-export { auth, db, createUserWithEmailAndPassword,signInWithEmailAndPassword, setDoc, doc, storage };
+const saveToFirestore = async (videoURL, coverURL) => {
+  await addDoc(collection(db, "videos"), { 
+    videoUrl: videoURL, 
+    coverUrl: coverURL, 
+    createdAt: new Date() 
+  });
+};
+
+export { auth, db, createUserWithEmailAndPassword,signInWithEmailAndPassword, setDoc, doc, storage, saveToFirestore };

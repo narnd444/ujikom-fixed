@@ -106,7 +106,7 @@ const ModalTambahGame = () => {
 
               <div className="mb-3">
                 <label className="block text-sm font-medium">Cover Game</label>
-                <input type="file" onChange={handleFileChange} className="file-input file-input-bordered file-input-accent w-full max-w-xs" required />
+                <input type="file" onChange={handleFileChange} className="file-input file-input-bordered file-input-primary w-full max-w-xs" required />
               </div>
 
               <div className="flex justify-end space-x-2 mt-4">

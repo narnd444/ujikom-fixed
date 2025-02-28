@@ -12,7 +12,7 @@ const TambahPetugasPage = () => {
         </div>
 
         <div className="flex-1 flex flex-col w-full">
-        <Navbar pos="Admin"/>
+        <Navbar pos="Admin" role="admin"/>
         <main className="p-10 w-full text-slate-800 flex flex-col space-y-5">
             <ModalTambahPengguna/>
             <TablePengguna/>
